@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: git clone --recurse-modules https://dev.gnupg.org/source/gpgme.git && cd gpgme && git checkout ${{ env.tagName }}
+      - run: git clone --recurse-submodules https://dev.gnupg.org/source/gpgme.git && cd gpgme && git checkout ${{ env.tagName }}
           
       - name: Install MSYS2
         uses: msys2/setup-msys2@v2
